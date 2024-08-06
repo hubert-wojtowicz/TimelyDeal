@@ -1,15 +1,14 @@
-import { useState } from "react";
 import "./BookingSlot.css";
 
 interface BookingSlotProps {
     slotId: string;
+    selected: boolean;
+    toggleSlot: () => void;
 }
 
-export const BookingSlot: React.FC<BookingSlotProps> = ({ slotId }) => {
-    const [selected, setSelected] = useState(false);
-    
+export const BookingSlot: React.FC<BookingSlotProps> = ({ slotId, selected, toggleSlot }) => {    
     function handleClick(event: React.MouseEvent<HTMLDivElement>): void {
-        setSelected(!selected);
+        toggleSlot();
     }
 
     return <div className={`booking-slot ${selected ? "selected" : "available"}`} onClick={handleClick}>
