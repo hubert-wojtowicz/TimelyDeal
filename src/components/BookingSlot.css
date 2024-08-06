@@ -1,0 +1,23 @@
+/* BookingSlot.css */
+
+.booking-slot {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    border: 1px solid #000;
+    cursor: pointer;
+  }
+  
+  .booking-slot.available {
+    background-color: green;
+    color: white;
+  }
+  
+  .booking-slot.selected {
+    background-color: orange;
+    color: white;
+  }
+  
